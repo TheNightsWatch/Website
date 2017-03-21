@@ -3,16 +3,18 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'urn:nightswatch:v3:app',
+    'id' => 'urn:nightswatch:v3:core',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
-    'controllerNamespace' => 'TheNightsWatch\Controller',
+    'bootstrap' => [
+        'log'
+    ],
+    'controllerNamespace' => 'TheNightsWatch\Core\Controller',
     'components' => [
         'request' => [
             'cookieValidationKey' => '3VwSCwLjgGMc27PyjkbJktHWdLPR2pmd',
         ],
         'user' => [
-            'identityClass' => \TheNightsWatch\Model\Identity::class,
+            'identityClass' => \TheNightsWatch\Core\Model\Identity::class,
         ],
         'mailer' => [
             'class' => \yii\swiftmailer\Mailer::class,
@@ -28,6 +30,11 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+    ],
+    'modules' => [
+        'events' => [
+            'class' => \TheNightsWatch\Events\Module::class,
+        ]
     ],
     'params' => $params,
 ];

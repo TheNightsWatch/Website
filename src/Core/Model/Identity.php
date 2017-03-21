@@ -1,6 +1,6 @@
 <?php
 
-namespace TheNightsWatch\Model;
+namespace TheNightsWatch\Core\Model;
 
 use yii\web\IdentityInterface;
 

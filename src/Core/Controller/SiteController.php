@@ -1,6 +1,6 @@
 <?php
 
-namespace TheNightsWatch\Controller;
+namespace TheNightsWatch\Core\Controller;
 
 use yii\rest\Controller;
 
