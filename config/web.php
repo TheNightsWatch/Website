@@ -31,11 +31,7 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
-    'modules' => [
-        'events' => [
-            'class' => \TheNightsWatch\Events\Module::class,
-        ]
-    ],
+    'modules' => require(__DIR__ . '/modules.php'),
     'params' => $params,
 ];
 
