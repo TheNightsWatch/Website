@@ -1,0 +1,14 @@
+#!/usr/bin/php
+<?php
+
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
+
+require_once(__DIR__.'/../vendor/autoload.php');
+
+\Yii::getVersion(); // Load Yii
+
+$config = require(__DIR__.'/../config/console.php');
+
+$app = new yii\console\Application($config);
+exit($app->run());

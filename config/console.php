@@ -3,11 +3,14 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'urn:nightswatch:v3:cli',
+    'id' => 'urn:nightswatch:v3:console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'TheNightsWatch\Core\Command',
     'components' => [
+        'cache' => [
+            'class' => \yii\caching\FileCache::class,
+        ],
         'log' => [
             'targets' => [
                 [
