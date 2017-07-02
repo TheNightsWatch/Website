@@ -1,7 +1,10 @@
 <?php
 
 return [
-    'events' => [
-        'class' => \TheNightsWatch\Events\Module::class
-    ]
+    'event' => [
+        'class' => \TheNightsWatch\Events\Module::class,
+    ],
+    'player' => [
+        'class' => \TheNightsWatch\Player\Module::class,
+    ],
 ];
