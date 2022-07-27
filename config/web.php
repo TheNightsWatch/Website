@@ -17,7 +17,9 @@ $config = [
             'identityClass' => \TheNightsWatch\Core\Model\Identity::class,
         ],
         'mailer' => [
-            'class' => \yii\swiftmailer\Mailer::class,
+            'class' => \yii\symfonymailer\Mailer::class,
+            'viewPath' => '@app/mail',
+            // send all mails to a file by default.
             'useFileTransport' => true,
         ],
         'log' => [
