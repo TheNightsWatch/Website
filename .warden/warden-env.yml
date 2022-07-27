@@ -3,3 +3,9 @@ services:
   nginx:
     environment:
       - NGINX_PUBLIC=/pub
+  php-fpm:
+    environment:
+      - YII_DEBUG=1
+  php-debug:
+    environment:
+      - YII_DEBUG=1
