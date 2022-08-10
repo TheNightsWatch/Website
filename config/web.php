@@ -6,7 +6,7 @@ $config = [
     'id' => 'urn:nightswatch:v3:core',
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
-        'log'
+        'log',
     ],
     'controllerNamespace' => 'TheNightsWatch\Core\Controller',
     'components' => [
@@ -37,7 +37,7 @@ $config = [
     'params' => $params,
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
 ];
 
@@ -56,4 +56,4 @@ if (YII_ENV_DEV) {
     ];
 }
 
-return $config;
+return array_merge_recursive(require('global.php'), $config);

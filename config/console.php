@@ -7,6 +7,14 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'TheNightsWatch\Core\Command',
+    'controllerMap' => [
+        'migrate' => [
+            'class' => \yii\console\controllers\MigrateController::class,
+            'migrationNamespaces' => [
+                'TheNightsWatch\Player\Migration',
+            ],
+        ],
+    ],
     'components' => [
         'cache' => [
             'class' => \yii\caching\FileCache::class,
@@ -33,4 +41,4 @@ if (YII_ENV_DEV) {
     ];
 }
 
-return $config;
+return array_merge_recursive(require('global.php'), $config);
