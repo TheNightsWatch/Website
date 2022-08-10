@@ -34,6 +34,7 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'modules' => require(__DIR__ . '/modules.php'),
+    'viewPath' => dirname(__DIR__) . '/src/Core/views',
     'params' => $params,
     'aliases' => [
         '@bower' => '@vendor/bower-asset',

@@ -2,12 +2,12 @@
 
 namespace TheNightsWatch\Core\Controller;
 
-use yii\rest\Controller;
+use yii\web\Controller;
 
 class SiteController extends Controller
 {
     public function actionIndex()
     {
-        return ['success' => true];
+        return $this->render('index');
     }
 }
