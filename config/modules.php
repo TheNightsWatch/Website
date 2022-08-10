@@ -7,4 +7,7 @@ return [
     'player' => [
         'class' => \TheNightsWatch\Player\Module::class,
     ],
+    'election' => [
+        'class' => \TheNightsWatch\Election\Module::class,
+    ]
 ];

@@ -12,6 +12,7 @@ $config = [
             'class' => \yii\console\controllers\MigrateController::class,
             'migrationNamespaces' => [
                 'TheNightsWatch\Player\Migration',
+                'TheNightsWatch\Election\Migration',
             ],
         ],
     ],
